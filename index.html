@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz</title>
+    <link href="./style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <section id="tela1">
+      <button id="start">Começar</button>
+    </section>
+    <section class="container-app" id="app">
+      <div class="header-app">
+        <h1>Show do Trilhão</h1>
+        <h2 id="nome-pergunta">Pergunta</h2>
+      </div>
+      <form class="box-opcoes">
+        <div class="opcoes">
+          <input type="radio" value="op1" name="opcao" id="op1" />
+          <label for="op1" id="label-op1">Opção1</label><br />
+          <input type="radio" value="op2" name="opcao" id="op2" />
+          <label for="op2" id="label-op2">Opção2</label><br />
+          <input type="radio" value="op3" name="opcao" id="op3" />
+          <label for="op3" id="label-op3">Opção3</label><br />
+          <input type="radio" value="op4" name="opcao" id="op4" />
+          <label for="op4" id="label-op4">Opção4</label><br />
+        </div>
+        <p id="resposta"></p>
+        <div class="botoes">
+          <input type="submit" value="Enviar" id="btn-enviar" />
+          <input type="submit" value="Próxima >" id="btn-proxima" />
+        </div>
+      </form>
+    </section>
+    <script src="./script.js" type="text/javascript"></script>
+  </body>
+</html>
