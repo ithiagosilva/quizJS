@@ -663,9 +663,15 @@ let valueOp4 = document.querySelector("#op4");
 let btnEnviar = document.querySelector("#btn-enviar");
 let btnProxima = document.querySelector("#btn-proxima");
 let resposta = document.querySelector("#resposta");
+let labelOp1 = document.querySelector("#label-op1");
+let labelOp2 = document.querySelector("#label-op2");
+let labelOp3 = document.querySelector("#label-op3");
+let labelOp4 = document.querySelector("#label-op4");
 let comecar = document.querySelector("#start");
 let tela1 = document.querySelector("#tela1");
+let acertosText = document.querySelector("#acertos");
 
+let placar = 0;
 let pergunta = [];
 
 function randomQuestion() {
@@ -697,23 +703,41 @@ function checkCorrect() {
     valueOp1.value === pergunta.opcoes[0].opCorreta
   ) {
     resposta.innerText = "Resposta Correta";
+    resposta.style.color = "#fff";
+    resposta.style.fontWeight = "bold";
+    placar += 1;
+    acertosText.innerText = "Acertos: " + placar;
   } else if (
     valueOp2.checked &&
     valueOp2.value === pergunta.opcoes[0].opCorreta
   ) {
     resposta.innerText = "Resposta Correta";
+    resposta.style.color = "#fff";
+    resposta.style.fontWeight = "bold";
+    placar += 1;
+    acertosText.innerText = "Acertos: " + placar;
   } else if (
     valueOp3.checked &&
     valueOp3.value === pergunta.opcoes[0].opCorreta
   ) {
     resposta.innerText = "Resposta Correta";
+    resposta.style.color = "#fff";
+    resposta.style.fontWeight = "bold";
+    placar += 1;
+    acertosText.innerText = "Acertos: " + placar;
   } else if (
     valueOp4.checked &&
     valueOp4.value === pergunta.opcoes[0].opCorreta
   ) {
     resposta.innerText = "Resposta Correta";
+    resposta.style.color = "#fff";
+    resposta.style.fontWeight = "bold";
+    placar += 1;
+    acertosText.innerText = "Acertos: " + placar;
   } else {
     resposta.innerText = "Resposta Incorreta";
+    resposta.style.color = "red";
+    resposta.style.fontWeight = "bold";
   }
 }
 
