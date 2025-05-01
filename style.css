@@ -104,6 +104,7 @@ input[type="submit"] {
   cursor: pointer;
   border-radius: 20px;
 }
+
 .botoes {
   gap: 20px;
 }

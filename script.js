@@ -663,10 +663,6 @@ let valueOp4 = document.querySelector("#op4");
 let btnEnviar = document.querySelector("#btn-enviar");
 let btnProxima = document.querySelector("#btn-proxima");
 let resposta = document.querySelector("#resposta");
-let labelOp1 = document.querySelector("#label-op1");
-let labelOp2 = document.querySelector("#label-op2");
-let labelOp3 = document.querySelector("#label-op3");
-let labelOp4 = document.querySelector("#label-op4");
 let comecar = document.querySelector("#start");
 let tela1 = document.querySelector("#tela1");
 let acertosText = document.querySelector("#acertos");
@@ -740,7 +736,6 @@ function checkCorrect() {
     resposta.style.fontWeight = "bold";
   }
 }
-
 function markedQuestion() {
   if (valueOp1.checked) {
     displayOp1.classList.add("question-checked");
@@ -764,6 +759,7 @@ function markedQuestion() {
     displayOp3.classList.remove("question-checked");
   }
 }
+
 document.querySelector("body").addEventListener("click", () => {
   markedQuestion();
 });
@@ -771,16 +767,18 @@ document.querySelector("body").addEventListener("click", () => {
 btnEnviar.addEventListener("click", (e) => {
   e.preventDefault();
   checkCorrect();
-  if (resposta.innerText === "Resposta Correta") {
+  if (resposta.innerText != "Selecione uma opção") {
     btnProxima.style.display = "flex";
   }
 });
+
 btnProxima.addEventListener("click", (e) => {
   e.preventDefault();
   randomQuestion();
   resposta.innerText = "";
   btnProxima.style.display = "none";
 });
+
 comecar.addEventListener("click", () => {
   document.querySelector(".container-app").style.display = "flex";
   tela1.style.display = "none";
